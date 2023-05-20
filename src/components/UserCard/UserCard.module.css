@@ -1,0 +1,67 @@
+.container {
+  position: relative;
+  padding: 20px 20px 36px 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 380px;
+  height: 460px;
+
+  box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
+  border-radius: 20px;
+  background: url("../images/main.png") no-repeat 36px 28px,
+    linear-gradient(114.99deg, #471ca9 -0.99%, #5736a3 54.28%, #4b2a99 78.99%);
+  margin-top: 24px;
+}
+
+.wrap {
+  text-align: center;
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #ebd8ff;
+  text-align: center;
+}
+
+.btn {
+  width: 198px;
+  height: 50px;
+
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.22;
+  text-transform: uppercase;
+  color: #373737;
+  margin-top: 26px;
+
+  cursor: pointer;
+  background: #ebd8ff;
+  box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  border: transparent;
+
+  transform: scale(1);
+
+  transition: transform 250ms linear;
+}
+
+.btn:hover {
+  transform: scale(1.03);
+}
+
+.following {
+  background: #5cd3a8;
+}

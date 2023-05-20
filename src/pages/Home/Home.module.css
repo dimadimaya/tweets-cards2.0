@@ -1,0 +1,29 @@
+.container {
+  width: 100vw;
+  height: calc(100vh - 90px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 24px;
+  animation: text-animation 3s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes text-animation {
+  0% {
+    font-size: 72px;
+  }
+  50% {
+    font-size: 64px;
+  }
+  100% {
+    font-size: 72px;
+  }
+}

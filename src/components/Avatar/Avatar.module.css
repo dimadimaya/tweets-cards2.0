@@ -1,0 +1,24 @@
+.container {
+  position: relative;
+  top: 51px;
+  left: -20px;
+}
+.line {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.circle {
+  position: absolute;
+  top: -36px;
+  left: 145px;
+  z-index: 2;
+}
+.img {
+  position: absolute;
+  width: 62px;
+  height: 62px;
+  top: -27px;
+  left: 159px;
+  border-radius: 50%;
+}

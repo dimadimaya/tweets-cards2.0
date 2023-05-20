@@ -1,0 +1,37 @@
+.container {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.text {
+  font-family: "Montserrat";
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 1.22;
+}
+.link {
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 8px 20px;
+  margin-left: 40px;
+
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.22;
+
+  background-color: #6a4cad;
+  color: #fff;
+
+  transition: transform, 200ms linear;
+}
+.link:hover,
+.link:focus {
+  color: #fff;
+  transform: scale(1.03);
+  background-color: #5d3ba4;
+}
