@@ -1,6 +1,6 @@
 # Веб-додаток - User cards
 
-(./assets/tweets.jpg)
+![Веб-додаток - User cards](./assets/tweets.jpg)
 
 ## Підготовка
 
