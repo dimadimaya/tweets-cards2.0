@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# Веб-додаток - User cards
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+(./assets/tweets.jpg)
 
-## Available Scripts
+## Підготовка
 
-In the project directory, you can run:
+1. Склонуй репозиторій командою `git clone https://github.com/dimadimaya/tweets-cards2.0`
+1. Переконайтеся, що на комп'ютері встановлено LTS-версію Node.js.
+   [Скачай та встанови](https://nodejs.org/en/) її якщо необхідно.
+1. Встанови базові залежності проекту командою `npm install`.
+1. Для запуску, виконай команду `npm start`.
+1. Перейди у браузері за адресою [http://localhost:3000/tweets-cards2.0](http://localhost:3000/tweets-cards2.0)
 
-### `npm start`
+## Для створення фрон-енд частини Веб-додатку використовувалися:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. [Create React App](https://github.com/facebook/create-react-app).
+2. [Redux Toolkit](https://redux-toolkit.js.org/introduction/getting-started)
+3. [Redux Persist](https://www.npmjs.com/package/redux-persist#basic-usage)
+4. [Axios](https://axios-http.com/ru/docs/intro)
+5. [React loader spinner](https://mhnpd.github.io/react-loader-spinner/docs/intro/)
+6. [React router dom](https://reactrouter.com/en/main/start/tutorial)
+7. [React select](https://react-select.com/home)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Для створення бек-енд частини Веб-додатку використовувалися:
 
-### `npm test`
+1. [Mockapi](https://mockapi.io/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Основний функціонал додатку:
 
-### `npm run build`
+1. Сторінка '/tweets' відображає картки юзерів із кількістю твітів і кількістю фолловерів. При клікові на кнопку Follow - текст змінюється на Following. Також
+   змінюється колір кнопки. А до кількості фоловерів додається ваш (тобто +1).
+2. При оновлені сторінки фіксується кінцевий результат дій юзера. Тобто,
+   якщо клікнути по кнопці і оновити сторінку - то кнопка все рівно залишається
+   в стані Following із відповідним кольором, а кількість фоловерів НЕ
+   зменшується до початкового значення.
+3. При повторному клікові на кнопку її текст та колір змінюються до початкового
+   стану. Також змінюється і кількість фоловерів. Вона зменшується на 1.
+4. У додатку реалізована маршрутизація:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- '/' – компонент Home, домашня сторінка.
+- '/tweets’ - компонент tweets, сторінка із відображенням твітів.
+  На сторінці tweets є кнопка Back, яка веде на головну сторінку. Якщо користувач зайшов за
+  неіснуючим маршрутом, він потрапляє на сторінку з помилкою і кнопкою повернутися на головну(домашню) сторінку.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+5. У додатку реалізована фільтрація юзерів. Це Dropdown із 3 опціями: show all, follow, followings
+   show all - показати всі твіти.
+   follow - показати твіти, у яких стан follow.
+   followings - показати твіти, у яких стан following
